@@ -1,0 +1,17 @@
+An error occurred:
+Traceback (most recent call last):
+  File "/workspace/Transformer/train.py", line 162, in <module>
+    main()
+  File "/workspace/Transformer/train.py", line 119, in main
+    train_pairs, tokenizer = prepare_data(config.path_ , config.token_path_, 'train',config.max_sentence_len)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/Transformer/load_data.py", line 43, in prepare_data
+    pairs, tokenizer = select_tokenize_pairs(pairs, max_len,token_path)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/Transformer/load_data.py", line 38, in select_tokenize_pairs
+    filtered_pairs = [[tokenize(tokenizer, pair[0], False), tokenize(tokenizer, pair[1], True)] for pair in pairs if filter_pairs(pair,max_len,tokenizer)]
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/Transformer/load_data.py", line 38, in <listcomp>
+    filtered_pairs = [[tokenize(tokenizer, pair[0], False), tokenize(tokenizer, pair[1], True)] for pair in pairs if filter_pairs(pair,max_len,tokenizer)]
+                                                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: filter_pairs() takes 2 positional arguments but 3 were given
