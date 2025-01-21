@@ -24,3 +24,7 @@ cat /home/user15/TT4/dataset9/training/newscom/News-Commentary.de-en.en | ./cus_
 # cat ../dataset10/train.de | ./cus_tokenizer.pl > ../dataset11/train.de
 
 # cat ../dataset10/train.en | ./cus_tokenizer.pl > ../dataset11/train.en
+
+
+
+
